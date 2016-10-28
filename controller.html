@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="node_modules/socket.io-client/socket.io.js"></script>
+<script type="text/javascript">
+  var baseURL = getBaseURL();
+  var socketIOPort = 3001;
+  var socketIOLocation = baseURL + socketIOPort;
+  socket = io.connect(socketIOLocation);
+
+  function getBaseURL() {
+    baseURL = location.protocol + "//" + location.hostname + ":" + location.port;
+    return baseURL;
+  }
+
+  window.ondeviceorientation = function(event) {
+    var coords = {
+      alpha: event.alpha,
+      beta: event.beta,
+      gamma: event.gamma
+    }
+
+    socket.emit('device', coords);
+
+  };
+</script>
+</body>
+</html>
