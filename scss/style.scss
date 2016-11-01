@@ -19,6 +19,18 @@ body {
   transform-style: preserve-3d;
 }
 
+.window {
+  background: url('../images/window.png');
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateZ(180deg);
+  width: 36.8vw;
+  height: 63.4vw;
+  box-shadow: 0vw 0.5vw 2vw rgba(0,0,0,.5);
+  background-size: cover;
+}
+
 .projector {
   position: absolute;
   top: 50%;
@@ -152,6 +164,7 @@ iframe {
 .right {
   transform-origin: top right;
   transform: rotateZ(-90deg) rotateX(90deg) translateY(-($height / 2));
+  transform-style: preserve-3d;
 }
 
 .top {
@@ -240,3 +253,5 @@ h1 {
 
   100% { opacity: 1; }
 }
+
+@import "c3po";
