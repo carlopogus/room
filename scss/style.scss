@@ -44,16 +44,48 @@ body {
   opacity: 0.8;
 }
 
-.tv {
+.tv-area {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotateZ(180deg);
-  width: 52vw;
+  width: 104vw;
   height: 30vw;
+}
+
+// .tv {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%) rotateZ(180deg);
+//   width: 52vw;
+//   height: 30vw;
+//   border: 1vw solid #2b2929;
+//   background: black;
+//   box-shadow: 0 1vw 2vw .25vw rgba(0,0,0, .5);
+// }
+
+.tv {
+  width: 49%;
+  height: 100%;
   border: 1vw solid #2b2929;
   background: black;
   box-shadow: 0 1vw 2vw .25vw rgba(0,0,0, .5);
+  box-sizing: border-box;
+  position: relative;
+
+  &:first-of-type {
+    float: left;
+  }
+
+  &:last-of-type {
+    float: right;
+  }
+
+  img {
+    min-width: 100%;
+    min-height: 100%;
+  }
 }
 
 video,
