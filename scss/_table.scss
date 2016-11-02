@@ -12,7 +12,18 @@ $table-height: 23vmin;
   bottom: 0;
   transform-style: preserve-3d;
 
-  .face {
+  &__shadow {
+    width: 0px;
+    height: 40%;
+    position: absolute;
+    transform: translateZ(-23vmin) translateX(-50%) translateY(-50%);
+    background: black;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0 0 20vmin 24vmin rgba(0,0,0,.5);
+  }
+
+  &__face {
     overflow: hidden;
     transform-origin: 0 0;
     position: absolute;
@@ -20,135 +31,142 @@ $table-height: 23vmin;
     background: #f1f1f1;
   }
 
-  .edge {
+   &__face--edge {
     background: #dcdcdc;
+
+    &--darker {
+      background: #bcbcbc;
+    }
   }
 
-  &__cuboid {
+  &__shape {
     position: absolute;
     transform-style: preserve-3d;
 
-    .bk,
-    .ft {
+    &__bk,
+    &__ft {
       width: 100%;
       height: 100%;
     }
-    .rt {
+
+    &__rt {
       transform: rotateY(90deg);
       transform-origin: 100% 0;
     }
-    .lt {
+
+    &__lt {
       transform: rotateY(-90deg);
     }
-    .tp {
+
+    &__tp {
       transform: rotateX(90deg);
     }
-    .bm {
+
+    &__bm {
       transform: rotateX(-90deg) translateY(0);
       bottom: 0;
       transform-origin: 0 100%;
     }
   }
 
-  .table__top {
-  width: 100%;
-  height: 100%;
-
-
-  .ft {
-    transform: translateZ(2vmin);
-  }
-
-  .lt {
-    width: 2vmin;
+  &__top {
+    width: 100%;
     height: 100%;
+
+
+    &__face--ft {
+      transform: translateZ(2vmin);
+    }
+
+    &__face--lt {
+      width: 2vmin;
+      height: 100%;
+    }
+
+    &__face--rt {
+      width: 2vmin;
+      height: 100%;
+      right: 0;
+    }
+
+    &__face--bm {
+      width: 100%;
+      height: 2vmin;
+    }
+
+    &__face--tp {
+      width: 100%;
+      height: 2vmin;
+    }
   }
 
-  .rt {
-    width: 2vmin;
-    height: 100%;
-    right: 0;
-  }
-
-  .bm {
-    width: 100%;
-    height: 2vmin;
-  }
-
-  .tp {
-    width: 100%;
-    height: 2vmin;
-  }
-}
-
-
-.table__leg {
-  width: $table-height;
-  height: 4vmin;
-
-  .ft {
-    transform: translateZ(2vmin);
-  }
-
-  .bk {
-    transform: translateZ(-2vmin);
-  }
-
-  .lt {
-    transform: rotateY(-90deg) translateX(-2vmin);
-    width: 4vmin;
+  &__leg {
+    width: $table-height;
     height: 4vmin;
-  }
 
-  .rt {
-    width: 4vmin;
-    height: 4vmin;
-    transform: rotateY(90deg) translateX(2vmin);
-    right: 0;
-  }
+    &__face--ft {
+      transform: translateZ(2vmin);
+    }
 
-  .bm {
-        width: 100%;
-    height: 4vmin;
-    transform: rotateX(-90deg) translateY(2vmin);
-  }
+    &__face--bk {
+      transform: translateZ(-2vmin);
+    }
 
-  .tp {
-    width: 100%;
-    height: 4vmin;
-    transform: rotateX(90deg) translateY(-2vmin);
-  }
+    &__face--lt {
+      transform: rotateY(-90deg) translateX(-2vmin);
+      width: 4vmin;
+      height: 4vmin;
+    }
 
-  &-tl {
-    transform: rotateY(90deg) translateZ(2vmin);
-    transform-origin: 0 center;
-  }
+    &__face--rt {
+      width: 4vmin;
+      height: 4vmin;
+      transform: rotateY(90deg) translateX(2vmin);
+      right: 0;
+    }
 
-  &-tr {
-    transform: rotateY(-90deg) translateZ(2vmin);
-    transform-origin: 100% center;
-    right: 0;
-  }
+    &__face--bm {
+          width: 100%;
+      height: 4vmin;
+      transform: rotateX(-90deg) translateY(2vmin);
+    }
 
-  &-bl {
-    transform: rotateY(90deg) translateZ(2vmin);
-    transform-origin: 0 center;
-    bottom: 0;
-  }
+    &__face--tp {
+      width: 100%;
+      height: 4vmin;
+      transform: rotateX(90deg) translateY(-2vmin);
+    }
 
-  &-br {
-    transform: rotateY(-90deg) translateZ(2vmin);
-    transform-origin: 100% center;
-    bottom: 0;
-    right: 0;
-  }
+    &--tl {
+      transform: rotateY(90deg) translateZ(2vmin);
+      transform-origin: 0 center;
+    }
 
-  &-tr .rt,
-  &-bl .rt,
-  &-br .lt,
-  &-tr .lt {
-    box-shadow: 0 0 4vmin rgba(0,0,0,.85);
+    &--tr {
+      transform: rotateY(-90deg) translateZ(2vmin);
+      transform-origin: 100% center;
+      right: 0;
+    }
+
+    &--bl {
+      transform: rotateY(90deg) translateZ(2vmin);
+      transform-origin: 0 center;
+      bottom: 0;
+    }
+
+    &--br {
+      transform: rotateY(-90deg) translateZ(2vmin);
+      transform-origin: 100% center;
+      bottom: 0;
+      right: 0;
+    }
+
+    &--tl .table__leg__face--rt,
+    &--bl .table__leg__face--rt,
+    &--br .table__leg__face--lt,
+    &--tr .table__leg__face--lt {
+      box-shadow: 0 0 4vmin rgba(0,0,0,.85);
+    }
   }
-}
 }
 
