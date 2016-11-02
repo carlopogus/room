@@ -1,89 +1,87 @@
 .art {
-  width: 35vw;
-  height: 50vw;
+  width: 35vmin;
+  height: 50vmin;
   position: absolute;
   background: #f1f1f1;
   top: 50%;
   left: 50%;
-  box-shadow: 0 0.5vw 1vw rgba(0,0,0,.5);
+  box-shadow: 0 0.5vmin 1vmin rgba(0,0,0,.5);
   transform-style: preserve-3d;
   transform: translate(-50%, -50%) rotateZ(180deg);
-}
 
-.face {
-  // box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.4);
-  overflow: hidden;
-  transform-origin: 0 0;
-  // backface-visibility: hidden;
-  position: absolute;
-  transform-style: preserve-3d;
-  background: #f1f1f1;
-}
-
-.cuboid {
-  position: absolute;
-  transform-style: preserve-3d;
-}
-
-[class*="cuboid"] .ft, [class*="cuboid"] .bk {
-  width: 100%;
-  height: 100%;
-}
-[class*="cuboid"] .bk {
-
-}
-[class*="cuboid"] .rt {
-  transform: rotateY(90deg);
-  transform-origin: 100% 0;
-}
-[class*="cuboid"] .lt {
-  transform: rotateY(-90deg);
-}
-[class*="cuboid"] .tp {
-  transform: rotateX(90deg);
-}
-[class*="cuboid"] .bm {
-  transform: rotateX(-90deg) translateY(0);
-  bottom: 0;
-  transform-origin: 0 100%;
-}
-
-
-
-.cub-1 {
-  width: 100%;
-  height: 100%;
-
-  .edge {
-    background: #dcdcdc;
+  .face {
+    overflow: hidden;
+    transform-origin: 0 0;
+    position: absolute;
+    transform-style: preserve-3d;
+    background: #f1f1f1;
   }
 
-  .ft {
-    transform: translateZ(2vw);
-    background: url("https://s-media-cache-ak0.pinimg.com/564x/f4/43/e9/f443e955708a90bdd836c68e3ca24485.jpg");
-    background-size: contain;
-    box-shadow: inset 0 0 0 1vw #f1f1f1;
-    backface-visibility: visible;
+  .cuboid {
+    position: absolute;
+    transform-style: preserve-3d;
   }
 
-  .lt {
-    width: 2vw;
+  [class*="cuboid"] .ft, [class*="cuboid"] .bk {
+    width: 100%;
     height: 100%;
   }
+  [class*="cuboid"] .bk {
 
-  .rt {
-    width: 2vw;
+  }
+  [class*="cuboid"] .rt {
+    transform: rotateY(90deg);
+    transform-origin: 100% 0;
+  }
+  [class*="cuboid"] .lt {
+    transform: rotateY(-90deg);
+  }
+  [class*="cuboid"] .tp {
+    transform: rotateX(90deg);
+  }
+  [class*="cuboid"] .bm {
+    transform: rotateX(-90deg) translateY(0);
+    bottom: 0;
+    transform-origin: 0 100%;
+  }
+
+
+
+  .cub-1 {
+    width: 100%;
     height: 100%;
-    right: 0;
-  }
 
-  .bm {
-    width: 100%;
-    height: 2vw;
-  }
+    .edge {
+      background: #dcdcdc;
+    }
 
-  .tp {
-    width: 100%;
-    height: 2vw;
+    .ft {
+      transform: translateZ(2vmin);
+      background: url("https://s-media-cache-ak0.pinimg.com/564x/f4/43/e9/f443e955708a90bdd836c68e3ca24485.jpg");
+      background-size: contain;
+      box-shadow: inset 0 0 0 1vmin #f1f1f1;
+      backface-visibility: visible;
+    }
+
+    .lt {
+      width: 2vmin;
+      height: 100%;
+    }
+
+    .rt {
+      width: 2vmin;
+      height: 100%;
+      right: 0;
+    }
+
+    .bm {
+      width: 100%;
+      height: 2vmin;
+    }
+
+    .tp {
+      width: 100%;
+      height: 2vmin;
+    }
   }
 }

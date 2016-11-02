@@ -2,16 +2,16 @@
 // $size: 1000px;
 // $height: 325px;
 @import "compass";
-$scene: 100vw * 3;
-$size: 100vw * 3;
-$height: 32.5vw * 3;
+$scene: 100vmin * 3;
+$size: 100vmin * 3;
+$height: 32.5vmin * 3;
 
 body {
   overflow: hidden;
 }
 
 .canvas {
-  width: 100vw;
+  width: 100vmin;
   height: 100vh;
   -webkit-perspective: $size / 2;
   perspective: $size / 2;
@@ -25,9 +25,9 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotateZ(180deg);
-  width: 36.8vw;
-  height: 63.4vw;
-  box-shadow: 0vw 0.5vw 2vw rgba(0,0,0,.5);
+  width: 36.8vmin;
+  height: 63.4vmin;
+  box-shadow: 0vmin 0.5vmin 2vmin rgba(0,0,0,.5);
   background-size: cover;
 }
 
@@ -37,8 +37,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) rotateZ(180deg);
   overflow: hidden;
-  width: 71vw;
-  height: 98vw;
+  width: 71vmin;
+  height: 98vmin;
   mix-blend-mode: darken;
   filter: hue-rotate(15deg) blur(0px) brightness(113%) contrast(70%);
   opacity: 0.8;
@@ -49,8 +49,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotateZ(180deg);
-  width: 104vw;
-  height: 30vw;
+  width: 104vmin;
+  height: 30vmin;
 }
 
 // .tv {
@@ -58,21 +58,22 @@ body {
 //   top: 50%;
 //   left: 50%;
 //   transform: translate(-50%, -50%) rotateZ(180deg);
-//   width: 52vw;
-//   height: 30vw;
-//   border: 1vw solid #2b2929;
+//   width: 52vmin;
+//   height: 30vmin;
+//   border: 1vmin solid #2b2929;
 //   background: black;
-//   box-shadow: 0 1vw 2vw .25vw rgba(0,0,0, .5);
+//   box-shadow: 0 1vmin 2vmin .25vmin rgba(0,0,0, .5);
 // }
 
 .tv {
   width: 49%;
   height: 100%;
-  border: 1vw solid #2b2929;
+  border: 1vmin solid #2b2929;
   background: black;
-  box-shadow: 0 1vw 2vw .25vw rgba(0,0,0, .5);
+  box-shadow: 0 1vmin 2vmin .25vmin rgba(0,0,0, .5);
   box-sizing: border-box;
   position: relative;
+  overflow: hidden;
 
   &:first-of-type {
     float: left;
@@ -121,6 +122,7 @@ iframe {
   right: 0;
   bottom: 0;
   margin: auto;
+  transform: rotate3d(-0.0332233, -0.976459, 0.213128, -78.2789deg) rotate3d(0.988067, 0, 0.154024, 77.5433deg) rotate3d(0, 1, 0, -8.8602deg);
 }
 
 .box-inner {
@@ -182,6 +184,7 @@ iframe {
 }
 
 .bottom {
+  transform-style: preserve-3d;
   transform: translateZ(-($height / 2));
   background: url('../images/floor.jpg');
   background-size: 20%;
@@ -217,23 +220,23 @@ iframe {
 }
 h1 {
   font-family: avenir, sans-serif;
-  font-size: 15vw;
+  font-size: 15vmin;
   line-height: 0px;
   font-weight: 800;
   color: transparent;
-  -webkit-text-stroke-width: 0.75vw;
+  -webkit-text-stroke-width: 0.75vmin;
   -webkit-text-stroke-color: #2b2b2b;
   position: relative;
   text-transform: uppercase;
-      text-shadow: 0px 1vw 1vw rgba(0, 0, 0, 0.2);
+      text-shadow: 0px 1vmin 1vmin rgba(0, 0, 0, 0.2);
   &:before {
     content:"DOGHOUSE";
     position: absolute;
     top: 0;
     left: 0;
     color: transparentize(#2B2C2D, .9);
-    text-shadow: 0px 0px 4vw rgba(255, 51, 51, 0.7);
-    -webkit-text-stroke-width: 0.5vw;
+    text-shadow: 0px 0px 4vmin rgba(255, 51, 51, 0.7);
+    -webkit-text-stroke-width: 0.5vmin;
     -webkit-text-stroke-color: red;
     //-webkit-filter: blur(.75px);
     @include animation( flicker 20s linear infinite );
@@ -245,7 +248,7 @@ h1 {
     left: 0;
     color: transparent;
     //-webkit-filter: blur(.75px);
-    -webkit-text-stroke-width: 0.12vw;
+    -webkit-text-stroke-width: 0.12vmin;
     -webkit-text-stroke-color: rgba(255,255,255,.8);
     //-webkit-filter: blur(.75px);
     @include animation( flicker 20s linear infinite );
@@ -287,3 +290,5 @@ h1 {
 }
 
 @import "c3po";
+@import "table";
+@import "monitor";
