@@ -1,0 +1,56 @@
+.projector {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateZ(180deg);
+  overflow: hidden;
+  width: 71vmin;
+  height: 98vmin;
+  mix-blend-mode: darken;
+  filter: hue-rotate(15deg) blur(0px) brightness(113%) contrast(70%);
+  opacity: 0.8;
+}
+
+.tv-area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateZ(180deg);
+  width: 104vmin;
+  height: 30vmin;
+}
+
+.tv {
+  width: 49%;
+  height: 100%;
+  border: 1vmin solid #2b2929;
+  background: black;
+  box-shadow: 0 1vmin 2vmin .25vmin rgba(0,0,0, .5);
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+
+  &:first-of-type {
+    float: left;
+  }
+
+  &:last-of-type {
+    float: right;
+  }
+
+  img {
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+
+video,
+iframe {
+  width: 172%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}

@@ -16,18 +16,72 @@
     top: 50%;
     left: 50%;
     width: $width * 2;
-    height: $height;
+    height: 0;
     transform-origin: center;
-    transform: translateZ(12vmin) translateX(-50%) translateY(-50%) rotateZ(90deg) rotateX(-90deg);
+    transform: translateZ(2vmin + 0.1) translateX(-50%) translateY(-50%) rotateZ(90deg);
+    box-shadow: 0 0 15vmin 2vmin rgba(0, 0, 0, 0.5);
+
+    &__inner {
+      position: absolute;
+      width: ($width * 2) - 1;
+      height: $height + 3;
+      transform-style: preserve-3d;
+      transform: rotateX(-90deg);
+      transform-origin: bottom;
+      bottom: 0;
+    }
+  }
+
+  &__pole {
+    position: absolute;
+    width: 2vmin;
+    height: 90%;
+    bottom: 0;
+    left: 50%;
+    transform: translateZ(-7vmin) translateX(-50%);
+    border-radius: 0.65vmin;
+    border-bottom: 1px solid rgba(0,0,0,.25);
+
+    @include background-image(linear-gradient(left,
+        rgba(147,147,147,1) 0%,
+        rgba(147,147,147,1) 10%,
+        rgba(147,147,147,1) 25%,
+        rgba(221,221,221,1) 30%,
+        rgba(249,249,249,1) 50%,
+        rgba(196,196,196,1) 65%,
+        rgba(127,127,127,1) 90%,
+        rgba(127,127,127,1) 100%
+        ));
+  }
+
+  &__wires {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translateZ(-6.9vmin) translateX(-50%);
+    background: url('../images/monitor-wires.png');
+    background-size: 100% 100%;
   }
 
   &--1 {
     transform: rotateY(30deg);
+
+    .monitor__face--ft {
+      background: url("../images/dhwebsite.jpg");
+      background-size: contain;
+    }
   }
 
   &--2 {
     right: 0;
     transform: rotateY(-30deg);
+
+    .monitor__face--ft {
+      background: url("../images/iterm.jpg");
+      background-size: contain;
+    }
   }
 
   &__face {

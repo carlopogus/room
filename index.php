@@ -5,15 +5,13 @@
     <title>A Pen by  Carl</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/normalize.css">
-    <style type="text/css">
-      iframe {
-        width: 100vw;
-        height: 50vh;
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-  <iframe src="index.php"></iframe>
-  <iframe src="index.php"></iframe>
+
+    <?php include('includes/room.php'); ?>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
