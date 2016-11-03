@@ -36,9 +36,6 @@ var default_vector = {
 };
 
 window.ondeviceorientation = function(event) {
-  // var alpha = Math.floor(event.alpha),
-  //     beta = Math.floor(event.beta),
-  //     gamma = Math.floor(event.gamma) * -1;
   var alpha = event.alpha,
   beta = event.beta,
   gamma = event.gamma * -1;
@@ -67,6 +64,24 @@ window.ondeviceorientation = function(event) {
     axis.y[2] + ', ' +
     gamma + 'deg)'
   });
-
-
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

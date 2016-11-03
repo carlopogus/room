@@ -14,5 +14,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="node_modules/socket.io-client/socket.io.js"></script>
     <script src="js/desktop.js"></script>
+    <script src="js/video-trigger.js"></script>
   </body>
 </html>

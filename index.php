@@ -13,5 +13,6 @@
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script src="js/index.js"></script>
+    <script src="js/video-trigger.js"></script>
   </body>
 </html>

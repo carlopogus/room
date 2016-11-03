@@ -43,14 +43,32 @@
     min-width: 100%;
     min-height: 100%;
   }
+
+  &__static {
+    background: url('../images/static.gif');
+    background-size: contain;
+  }
+
+  &__playing {
+    video {
+      display: block;
+    }
+  }
+
+  &__off {
+    video {
+      display: none;
+    }
+  }
+
+  video {
+    width: 172%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
 }
 
-video,
-iframe {
-  width: 172%;
-  height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}

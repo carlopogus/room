@@ -1,3 +1,33 @@
 body {
   overflow: hidden;
 }
+
+#crosshair {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  &:before,
+  &:after {
+    content:'';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: black;
+    box-shadow: 0 0 1px white;
+  }
+
+  &:after {
+    transform: rotate(90deg);
+  }
+}

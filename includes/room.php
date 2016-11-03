@@ -82,13 +82,13 @@
         </div>
         <div class="wall left">
         <div class="tv-area">
-          <div class="tv">
-            <video loop controls playsinline>
+          <div class="tv tv--1 tv__off">
+            <video playsinline>
               <source src="images/simon_1.mp4" type="video/mp4">
             </video>
           </div>
-          <div class="tv">
-            <img src="images/mind-blown.gif">
+          <div class="tv tv--2">
+            <img src="images/chromecast.jpg">
           </div>
         </div>
         </div>
@@ -110,3 +110,4 @@
     </div>
   </div>
 </div>
+<div id="crosshair"></div>

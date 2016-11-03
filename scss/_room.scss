@@ -3,7 +3,7 @@ $size: 100vmin * 3;
 $height: 32.5vmin * 3;
 
 .canvas {
-  width: 100vmin;
+  width: 100vw;
   height: 100vh;
   -webkit-perspective: $size / 2;
   perspective: $size / 2;
@@ -34,7 +34,7 @@ $height: 32.5vmin * 3;
   right: 0;
   bottom: 0;
   margin: auto;
-  transform: rotate3d(-0.0332233, -0.976459, 0.213128, -78.2789deg) rotate3d(0.988067, 0, 0.154024, 77.5433deg) rotate3d(0, 1, 0, -8.8602deg);
+  transform: rotateX(90deg);
 }
 
 .box-inner {
